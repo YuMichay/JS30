@@ -1,0 +1,242 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fffdb5;
+    border-radius: 50%;
+    box-shadow: -42vw -4vh 0px 0px #fffdb5,25vw -41vh 0px 0px #fffdb5,-20vw 49vh 0px 1px #fffdb5,5vw 40vh 1px 1px #fffdb5,29vw 19vh 1px 0px #fffdb5,-44vw -13vh 0px 0px #fffdb5,46vw 41vh 0px 1px #fffdb5,-3vw -45vh 0px 1px #fffdb5,47vw 35vh 1px 0px #fffdb5,12vw -8vh 1px 0px #fffdb5,-34vw 48vh 1px 1px #fffdb5,32vw 26vh 1px 1px #fffdb5,32vw -41vh 1px 1px #fffdb5,0vw 37vh 1px 1px #fffdb5,34vw -26vh 1px 0px #fffdb5,-14vw -49vh 1px 0px #fffdb5,-12vw 45vh 0px 1px #fffdb5,-44vw -33vh 0px 1px #fffdb5,-13vw 41vh 0px 0px #fffdb5,-36vw -11vh 0px 1px #fffdb5,-23vw -24vh 1px 0px #fffdb5,-38vw -27vh 0px 1px #fffdb5,16vw -19vh 0px 0px #fffdb5,28vw 33vh 1px 0px #fffdb5,-49vw -4vh 0px 0px #fff,16vw 32vh 0px 1px #fff,36vw -18vh 1px 0px #fff,-25vw -30vh 1px 0px #fff,-23vw 24vh 0px 1px #fff,-2vw -35vh 1px 1px #fff,-25vw 9vh 0px 0px #fff,-15vw -34vh 0px 0px #fff,-8vw -19vh 1px 0px #fff,-20vw -20vh 1px 1px #fff,42vw 50vh 0px 1px #fff,-32vw 10vh 1px 0px #fff,-23vw -17vh 0px 0px #fff,44vw 15vh 1px 0px #fff,-40vw 33vh 1px 1px #fff,-43vw 8vh 0px 0px #fff,-48vw -15vh 1px 1px #fff,-24vw 17vh 0px 0px #fff,-31vw 50vh 1px 0px #fff,36vw -38vh 0px 1px #fff,-7vw 48vh 0px 0px #fff,15vw -32vh 0px 0px #fff,29vw -41vh 0px 0px #fff,2vw 37vh 1px 0px #fff,7vw -40vh 1px 1px #fff,15vw 18vh 0px 0px #fff,25vw -13vh 1px 1px #fff,-46vw -12vh 1px 1px #fff,-18vw 22vh 0px 0px #fff,23vw -9vh 1px 0px #fff,50vw 12vh 0px 1px #fff,45vw 2vh 0px 0px #fff,14vw -48vh 1px 0px #fff,23vw 43vh 0px 1px #fff,-40vw 16vh 1px 1px #fff,20vw -31vh 0px 1px #fff,-17vw 44vh 1px 1px #fff,18vw -45vh 0px 0px #fff,33vw -6vh 0px 0px #fffdb5,0vw 7vh 0px 1px #fffdb5,-10vw -18vh 0px 1px #fffdb5,-19vw 5vh 1px 0px #fffdb5,1vw 42vh 0px 0px #fff,22vw 48vh 0px 1px #fff,39vw -8vh 1px 1px #fff,-6vw -42vh 1px 0px #fffdb5,-47vw 34vh 0px 0px #fffdb5,-46vw 19vh 0px 1px #fffdb5,-12vw -32vh 0px 0px #fffdb5,-45vw -38vh 0px 1px #fffdb5,-28vw 18vh 1px 0px #fffdb5,-38vw -46vh 1px 1px #fffdb5,49vw -6vh 1px 1px #fffdb5,-28vw 18vh 1px 1px #fffdb5,10vw -24vh 0px 1px #fffdb5,-5vw -11vh 1px 1px #fff,33vw -8vh 1px 0px #fffdb5,-16vw 17vh 0px 0px #fffdb5,18vw 27vh 0px 1px #fffdb5,-8vw -10vh 1px 1px #fffdb5;
+    animation: zoom 16s alternate infinite;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    border: 0.625rem solid white;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.watches {
+    display: none;
+}
+
+.chosen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;
+    background-color: white;
+    transform-origin: 0%;
+    top: 50%;
+    left: 50%;
+    border-radius: 0.313rem;
+}
+
+.arrow-hours {
+    width: 4rem;
+    height: 0.313rem;
+}
+
+.arrow-minutes {
+    width: 6rem;
+    height: 0.125rem;
+}
+
+.arrow-seconds {
+    width: 8rem;
+    height: 0.0625rem;
+}
+
+.origin-digits {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.5em;
+}
+
+.digit-1 {
+    transform: translate(70%, 5%);
+}
+
+.digit-2 {
+    transform: translate(85%, 70%);
+}
+
+.digit-3 {
+    transform: translate(90%, 190%);
+}
+
+.digit-4 {
+    transform: translate(85%, 320%);
+}
+
+.digit-5 {
+    transform: translate(70%, 380%);
+}
+
+.digit-6 {
+    transform: translate(48%, 350%);
+}
+
+.digit-7 {
+    transform: translate(27%, 187%);
+}
+
+.digit-8 {
+    transform: translate(10%, -70%);
+}
+
+.digit-9 {
+    transform: translate(5%, -400%);
+}
+
+.digit-10 {
+    transform: translate(10%, -730%);
+}
+
+.digit-11 {
+    transform: translate(25%, -995%);
+}
+
+.digit-12 {
+    transform: translate(46%, 30%);
+}
+
+.digits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.313rem;
+    font-size: 2.5em;
+    color: white;
+}
+
+.settings {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 1.375rem;
+    height: 1.375rem;
+    cursor: pointer;
+    background-image: url("./assets/settings.svg");
+    background-size: contain;
+    z-index: 1;
+}
+
+.settings-window {
+    display: none;
+}
+
+.opened {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.313rem;
+    background-color: black;
+    border: 0.0625rem solid white;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes open {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes close {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+button {
+    cursor: pointer;
+    width: 5rem;
+    height: 2rem;
+    background-color: transparent;
+    color: white;
+    border: 0.0625rem solid white;
+    border-radius: 0.313rem;
+    transition: all 0.3s;
+}
+
+.btn-origin:hover {
+    border: 0.0625rem solid rgb(222, 216, 44);
+    color: rgb(222, 216, 44);
+}
+
+.btn-modern:hover {
+    border: 0.0625rem solid rgb(116, 139, 254);
+    color: rgb(116, 139, 254);
+}
+
+.btn-digit:hover {
+    border: 0.0625rem solid rgb(254, 116, 231);
+    color: rgb(254, 116, 231);
+}

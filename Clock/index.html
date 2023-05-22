@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="wrapper">
+        <div class="watches origin chosen">
+            <div class="arrows">
+                <div class="arrow arrow-hours"></div>
+                <div class="arrow arrow-minutes"></div>
+                <div class="arrow arrow-seconds"></div>
+            </div>
+
+            <div class="origin-digits">
+                <div class="digit-12">12</div>
+                <div class="digit-1">1</div>
+                <div class="digit-2">2</div>
+                <div class="digit-3">3</div>
+                <div class="digit-4">4</div>
+                <div class="digit-5">5</div>
+                <div class="digit-6">6</div>
+                <div class="digit-7">7</div>
+                <div class="digit-8">8</div>
+                <div class="digit-9">9</div>
+                <div class="digit-10">10</div>
+                <div class="digit-11">11</div>
+            </div>
+        </div>
+
+        <div class="watches digit">
+            <div class="digits">
+                <span class="hours"></span>
+                <span>:</span>
+                <span class="minutes"></span>
+                <span>:</span>
+                <span class="seconds"></span>
+            </div>
+        </div>
+    </div>
+    <div class="settings"></div>
+    <div class="settings-window">
+        <button class="btn-origin">Origin</button>
+        <button class="btn-modern">Modern</button>
+        <button class="btn-digit">Digit</button>
+    </div>
+    <div class="overlay"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
