@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/image.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="settings">
+        <label for="sepia">Sepia:
+            <input type="range" name="sepia" id="sepia" min="0" max="100" step="10" value="0" data-sizing="%">
+        </label>
+        <label for="brightness">Brightness:
+            <input type="range" name="brightness" id="brightness" min="0" max="100" step="10" value="100" data-sizing="%">
+        </label>
+        <label for="contrast">Contrast:
+            <input type="range" name="contrast" id="contrast" min="0" max="100" step="10" value="100" data-sizing="%">
+        </label>
+        <label for="grayscale">Grayscale:
+            <input type="range" name="grayscale" id="grayscale" min="0" max="100" step="10" value="0" data-sizing="%">
+        </label>
+        <label for="saturate">Saturate:
+            <input type="range" name="saturate" id="saturate" min="0" max="100" step="10" value="100" data-sizing="%">
+        </label>
+    </div>
+    <div class="image">
+        <img src="./assets/pexels-david-bartus-610294.jpg" alt="image" id="image">
+    </div>
+    <div class="source">
+        <label for="picture">Add a picture:
+            <input type="file" name="picture" id="picture" accept="image/png, image/jpeg">
+        </label>
+        <button class="download">Download</button>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
