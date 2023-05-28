@@ -1,0 +1,62 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: calc(100% / 5);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card1 {
+    background-image: url("./assets/cat.jpg");
+}
+
+.card2 {
+    background-image: url("./assets/shark.jpg");
+}
+
+.card3 {
+    background-image: url("./assets/jump.jpg");
+}
+
+.card4 {
+    background-image: url("./assets/bear.jpg");
+}
+
+.card5 {
+    background-image: url("./assets/horse.jpg");
+}
+
+p {
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    letter-spacing: 0.0625rem;
+    word-spacing: 0.0625rem;
+    word-wrap: break-word;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.313rem;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
