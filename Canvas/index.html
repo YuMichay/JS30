@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="shortcut icon" href="./assets/pen-tool.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <label for="size">
+            <span class="title">Size:</span>
+            <input id="size" type="number" min="10" max="100" step="10" value="10">
+        </label>
+        <label for="color">
+            <span class="title">Color:</span>
+            <input id="color" type="color">
+        </label>
+        <label for="multicolor">
+            <span class="title">Multicolor:</span>
+            <input id="multicolor" type="checkbox">
+        </label>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="./script.js"></script>
+</body>
+</html>
