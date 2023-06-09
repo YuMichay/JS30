@@ -1,0 +1,260 @@
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #23300c;
+}
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rgb(190, 190, 190);
+}
+
+.wrapper,
+.video-player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-player {
+    overflow-y: hidden;
+    position: relative;
+}
+
+video {
+    width: 50%;
+    box-shadow: 0px 0px 24px 0px rgb(3, 3, 3);
+}
+
+video::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+
+.controls {
+    position: absolute;
+    bottom: -2rem;
+    width: 49.5%;
+    height: 2rem;
+    padding: 0.0625rem 0.313rem;
+    background-color: rgba(35, 48, 12, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.313rem;
+    transition: bottom 0.2s ease-in-out;
+}
+
+.play-btn {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: url("./assets/play-circle.svg");
+    background-color: rgba(35, 48, 12, 0.8);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.play-btn:hover {
+    box-shadow: 0px 0px 24px 0px rgb(3, 3, 3);
+}
+
+.watched-time,
+.general-time {
+    font-size: 0.8em;
+    color: rgb(190, 190, 190);
+}
+
+.progress-bar {
+    position: relative;
+    cursor: pointer;
+    width: 70%;
+    background-color: rgb(190, 190, 190);
+}
+
+.progress-bar_filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background-color: rgb(3, 3, 3);
+}
+
+.controls__volume {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.controls__play {
+    background: url("./assets/play.svg");
+}
+
+.controls__volume_image {
+    background: url("./assets/volume-2.svg");
+}
+
+.controls__volume_range {
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.controls__volume_range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid #23300c;
+    border-radius: 50%;
+    background-color: rgb(190, 190, 190);
+}
+
+.controls__fullscreen_image {
+    background: url("./assets/maximize.svg");
+}
+
+.play-btn,
+.controls__play,
+.controls__volume_image,
+.controls__fullscreen_image {
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.controls__play,
+.controls__volume_image,
+.controls__fullscreen_image {
+    width: 1.313rem;
+    height: 1.313rem;
+    padding: 0.0625rem;
+}
+
+.progress-bar,
+.progress-bar_filled,
+.controls__volume_range {
+    height: 0.313rem;
+    border-radius: 0.313rem;
+}
+
+.frames {
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 60%;
+    position: absolute;
+    overflow: hidden;
+    top: 1.313rem;
+}
+
+.frames,
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+iframe {
+    width: 30%;
+    height: 100%;
+    padding: 0.313rem 1rem;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 0px 24px 0px rgb(3, 3, 3);
+}
+
+iframe:hover {
+    transform: translateY(-0.313rem);
+}
+
+.previous {
+    content: url("./assets/arrow-left-circle.svg");
+    left: 15%;
+}
+
+.next {
+    content: url("./assets/arrow-right-circle.svg");
+    right: 15%;
+}
+
+.previous,
+.next {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    top: 5.313rem;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.previous:hover,
+.next:hover {
+    box-shadow: 0px 0px 24px 0px rgb(191, 192, 194);
+}
+
+.inactive {
+    cursor: auto;
+}
+
+.inactive:hover {
+    box-shadow: none;
+}
+
+@media (min-width: 1700px) {
+    .slider {
+        width: 100%;
+    }
+
+    .previous,
+    .next {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider {
+        width: 90%;
+    }
+
+    .previous {
+        left: 1%;
+    }
+    
+    .next {
+        right: 1%;
+    }
+}
+
+@media (max-width: 725px) {
+    iframe {
+        width: 45%;
+    }
+}
+
+@media (max-width: 425px) {
+    .slider {
+        width: 80%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}

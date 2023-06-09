@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>Forest Bathing</title>
+    <link rel="shortcut icon" href="./assets/film.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <p class="title">Forest Bathing</p>
+
+        <div class="video-player">
+            <video class="player" src="./assets/pexels-reivana-relaxation-15727541-1920x1080-30fps.mp4"></video>
+            <button class="play-btn"></button>
+            <div class="controls">
+                <button class="controls__play"></button>
+                <span class="watched-time"></span>
+                <div class="progress-bar">
+                    <div class="progress-bar_filled"></div>
+                </div>
+                <span class="general-time"></span>
+                <div class="controls__volume">
+                    <span class="controls__volume_image"></span>
+                    <input class="controls__volume_range" type="range" name="volume" min="0" max="1" step="0.5" value="1">    
+                </div>
+                <span class="controls__fullscreen_image"></span>
+            </div>
+        </div>
+
+        <div class="frames">
+            <div class="btn previous inactive"></div>
+            <div class="slider">
+                <iframe class="frame" width="280" height="180" src="https://www.youtube.com/embed/eNUpTV9BGac" allowfullscreen></iframe>
+                <iframe class="frame" width="280" height="180" src="https://www.youtube.com/embed/ynLpZGegiJE" allowfullscreen></iframe>
+                <iframe class="frame" width="280" height="180" src="https://www.youtube.com/embed/RDHYSz63O2U" allowfullscreen></iframe>
+                <iframe class="frame" width="280" height="180" src="https://www.youtube.com/embed/18svAQDayS4" allowfullscreen></iframe>
+                <iframe class="frame" width="280" height="180" src="https://www.youtube.com/embed/h2fu0ge3zQo" allowfullscreen></iframe>
+            </div>
+            <div class="btn next"></div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
