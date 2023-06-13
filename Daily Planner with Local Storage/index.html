@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="shortcut icon" href="./assets/check-square.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start">
+        <button class="start__btn">Start</button>
+    </div>
+    <div class="wrapper">
+        <div class="days" title="choose a date and click + for adding a task">
+            <ul class="days__list"></ul>
+        </div>
+        <div class="tasks">
+            <button class="sort_btn">Sort by date</button>
+            <div class="tasks__list">
+                <div class="tasks__add-btn" title="add a task"></div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
