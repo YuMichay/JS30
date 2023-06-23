@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/camera.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="photobooth">
+        <div class="controls">
+            <div class="settings">
+                <label>Green Screen: 
+                    <input class="header-1" type="checkbox">
+                </label>
+                <label>Red Min: 
+                    <input class="rgb" type="range" min=0 max=255 name="rmin">
+                </label>
+                <label>Red Max:
+                    <input class="rgb" type="range" min=0 max=255 name="rmax">
+                </label>
+                
+                <label>Green Min: 
+                    <input class="rgb" type="range" min=0 max=255 name="gmin">
+                </label>
+                <label>Green Max:
+                    <input class="rgb" type="range" min=0 max=255 name="gmax">
+                </label>
+    
+                <label>Blue Min:
+                    <input class="rgb" type="range" min=0 max=255 name="bmin">
+                </label>
+                <label>Blue Max:
+                    <input class="rgb" type="range" min=0 max=255 name="bmax">
+                </label>  
+                <div class="other">
+                    <p class="header-2">Other Settings</p>
+                    <label>Ghost Effect:
+                        <input id="ghost" type="range" min=0.1 max=1 step="0.1" value="1">
+                    </label>
+                    <label>3D Effect:
+                        <input id="3d" type="range" min=0 max=10 step="1" value="0">
+                    </label>  
+                    <label>Color Effect:
+                        <input id="color" type="range" min=0 max=12 step="1" value="0">
+                    </label>  
+                </div>   
+            </div>
+            <video class="player"></video>
+        </div>
+        <canvas class="photo"></canvas>
+        <button class="take-photo">Take photo</button>
+        <div class="photos"></div>
+    </div>
+    <audio class="snap" src="./assets/iphone-camera-capture-6448.mp3" hidden></audio>
+    <script src="./script.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>

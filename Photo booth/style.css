@@ -1,0 +1,157 @@
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(30, 30, 30);
+    scrollbar-width: none;
+}
+
+.photobooth {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    width: 100%;
+    background-color: rgb(74, 74, 74);
+    display: flex;
+    flex-direction: row;
+}
+
+.settings {
+    width: 90%;
+    padding: 0.313rem;
+    display: grid;
+    grid-template-areas:
+    "header1 header1 header1"
+    "red1 blue1 green1"
+    "red2 blue2 green2"
+    "other other other";
+    align-items: baseline;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.settings label:nth-child(2) {
+    grid-area: red1;
+}
+
+.settings label:nth-child(3) {
+    grid-area: red2;
+}
+
+.settings label:nth-child(4) {
+    grid-area: blue1;
+}
+
+.settings label:nth-child(5) {
+    grid-area: blue2;
+}
+
+.settings label:nth-child(6) {
+    grid-area: green1;
+}
+
+.settings label:nth-child(7) {
+    grid-area: green2;
+}
+
+.header-1 {
+    grid-area: header1;
+}
+
+.other {
+    grid-area: other;
+}
+
+video {
+    width: 10%;
+    padding: 0.313rem;
+    transform: scaleX(-1);
+}
+
+input[type=range]  {
+    width: 8rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    height: 0.625rem;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 0.625rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background: rgb(30, 30, 30);
+    cursor: pointer;
+    width: 1rem;
+    height: 0.625rem;
+    -webkit-appearance: none;
+    box-shadow: -8rem 0 0 8rem rgb(144, 152, 158);
+}
+
+input[type=range]::-moz-range-track {
+    height: 0.625rem;
+}
+
+input[type=range]::-moz-range-thumb {
+    background: rgb(30, 30, 30);
+    cursor: pointer;
+    height: 0.625rem;
+    border-radius: 0;
+    box-shadow: -8rem 0 0 8rem rgb(144, 152, 158);
+    padding: 0;
+    margin: 0;
+}
+
+.photos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.take-photo {
+    width: 6rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.625rem;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 0.313rem;
+    margin: 0.313rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.take-photo:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.download {
+    width: 10%;
+    padding: 0.313rem 1rem;
+}
+
+.download img {
+    width: 100%;
+    border: 0.313rem solid white;
+    border-bottom-width: 3rem;
+}
+
+@media (max-width: 768px) {
+    .settings {
+        font-size: 0.8em;
+    }
+}
