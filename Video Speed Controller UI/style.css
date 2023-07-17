@@ -1,0 +1,169 @@
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #23300c;
+}
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rgb(190, 190, 190);
+}
+
+.wrapper,
+.video-player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-player {
+    overflow-y: hidden;
+    position: relative;
+}
+
+video {
+    width: 50%;
+    box-shadow: 0px 0px 24px 0px rgb(3, 3, 3);
+}
+
+video::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+
+.controls {
+    position: absolute;
+    bottom: -2rem;
+    width: 49.5%;
+    height: 2rem;
+    padding: 0.0625rem 0.313rem;
+    background-color: rgba(35, 48, 12, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.313rem;
+    transition: bottom 0.2s ease-in-out;
+}
+
+.play-btn {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: url("./assets/play-circle.svg");
+    background-color: rgba(35, 48, 12, 0.8);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.play-btn:hover {
+    box-shadow: 0px 0px 24px 0px rgb(3, 3, 3);
+}
+
+.watched-time,
+.general-time,
+#speed {
+    font-size: 0.8em;
+    color: rgb(190, 190, 190);
+}
+
+.progress-bar {
+    position: relative;
+    cursor: pointer;
+    width: 55%;
+    background-color: rgb(190, 190, 190);
+}
+
+.progress-bar_filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background-color: rgb(3, 3, 3);
+}
+
+.controls__volume,
+.controls__speed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.controls__play {
+    background: url("./assets/play.svg");
+}
+
+.controls__volume_image {
+    background: url("./assets/volume-2.svg");
+}
+
+.controls__volume_range,
+.controls__speed_range {
+    width: 70%;
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.controls__volume_range::-webkit-slider-thumb,
+.controls__speed_range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid #23300c;
+    border-radius: 50%;
+    background-color: rgb(190, 190, 190);
+}
+
+.controls__fullscreen_image {
+    background: url("./assets/maximize.svg");
+}
+
+.controls__download_image {
+    background: url("./assets/download.svg");
+}
+
+.play-btn,
+.controls__play,
+.controls__volume_image,
+.controls__fullscreen_image,
+.controls__download_image {
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.controls__play,
+.controls__volume_image,
+.controls__fullscreen_image,
+.controls__download_image {
+    width: 1.313rem;
+    height: 1.313rem;
+    padding: 0.0625rem;
+}
+
+#speed {
+    width: 1.5rem;
+}
+
+.progress-bar,
+.progress-bar_filled,
+.controls__volume_range,
+.controls__speed_range {
+    height: 0.313rem;
+    border-radius: 0.313rem;
+}
