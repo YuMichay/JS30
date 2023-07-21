@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Clock</title>
+    <link rel="shortcut icon" href="./assets/clock.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="options">
+        <div class="wrapper">
+            <input name="hours" type="number" class="option_hours" value="0" min="0" max="59" onkeydown="return false" />
+            <span>h</span>
+            <p class="arrow_hours top">⌃</p><p class="arrow_hours bottom">⌄</p>
+        </div>
+        <div class="wrapper">
+            <input name="minutes" type="number" class="option_minutes" value="0" min="0" max="59" onkeydown="return false" />
+            <span>m</span>
+            <p class="arrow_minutes top">⌃</p><p class="arrow_minutes bottom">⌄</p>
+        </div>
+        <div class="wrapper">
+            <input name="seconds" type="number" class="option_seconds" value="0" min="0" max="59" onkeydown="return false" />
+            <span>s</span>
+            <p class="arrow_seconds top">⌃</p><p class="arrow_seconds bottom">⌄</p>
+        </div>
+    </div>
+    <div class="clock">
+        <span class="time">00 : 00 : 00</span>
+        <div class="finish"></div>
+    </div>
+    <div class="buttons">
+        <button class="stop" disabled>Stop</button>
+        <button class="start">Start</button>
+        <button class="pause hidden">Pause</button>
+    </div>
+    <audio src="./assets/mixkit-bell-notification-933.wav"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
